@@ -1,3 +1,0 @@
-org.example.Main#main([Ljava/lang/String;)V
-==
-println java.io.PrintStream#println(Ljava/lang/String;)V
