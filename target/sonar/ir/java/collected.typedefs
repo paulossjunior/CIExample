@@ -1,0 +1,8 @@
+
+org.example.Main$
+<init>org.example.Main#<init>()V3
+main+org.example.Main#main([Ljava/lang/String;)Vjava.lang.Objectþ
+org.example.model.PessoaP
+<init>Forg.example.model.Pessoa#<init>(Ljava/lang/String;Ljava/lang/String;)V=
+getCpf3org.example.model.Pessoa#getCpf()Ljava/lang/String;?
+getNome4org.example.model.Pessoa#getNome()Ljava/lang/String;java.lang.Object
