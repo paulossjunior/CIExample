@@ -36,6 +36,6 @@ jobs:
           java-version: '17'
 
       - name: SonarCloud Scan
-        run: mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io
+        run: mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=paulossjunior-github -Dsonar.projectKey=CIExampleGithubActions
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
