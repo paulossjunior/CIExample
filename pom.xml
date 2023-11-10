@@ -13,7 +13,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
- <sonar.coverage.jacoco.xmlReportPaths>/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <sonar.organization>paulossjunior-github</sonar.organization>
         <sonar.projectKey>CIExampleGithubActions</sonar.projectKey>
         <sonar.projectName>CI Example</sonar.projectName>
@@ -62,36 +61,15 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <profiles>
-        <profile>
+<profiles>
+    <profile>
             <id>coverage</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>properties-maven-plugin</artifactId>
-                        <version>1.0.0</version>
-                        <executions>
-                            <execution>
-                                <phase>initialize</phase>
-                                <goals>
-                                    <goal>read-project-properties</goal>
-                                </goals>
-                                <configuration>
-                                    <files>
-                                        <file>sonar-project.properties</file>
-                                    </files>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.7</version>
                         <executions>
                             <execution>
                                 <id>prepare-agent</id>
@@ -104,6 +82,11 @@
                                 <goals>
                                     <goal>report</goal>
                                 </goals>
+                                <configuration>
+                                    <formats>
+                                        <format>XML</format>
+                                    </formats>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -111,6 +94,6 @@
             </build>
         </profile>
     </profiles>
-
+    
 
 </project>
