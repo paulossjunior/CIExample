@@ -17,6 +17,9 @@
         <sonar.organization>paulossjunior-github</sonar.organization>
         <sonar.projectKey>CIExampleGithubActions</sonar.projectKey>
         <sonar.projectName>CI Example</sonar.projectName>
+        <sonar.tests>src/test/java</sonar.tests>
+        <sonar.sources>src/main/java</sonar.sources>
+        <sonar.test.inclusions>**/*.java</sonar.test.inclusions>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
